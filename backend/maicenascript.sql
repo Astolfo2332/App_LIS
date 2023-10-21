@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2023 a las 20:14:54
+-- Tiempo de generación: 21-10-2023 a las 20:36:30
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -47,7 +47,16 @@ CREATE TABLE `patients` (
 --
 
 INSERT INTO `patients` (`id`, `doc`, `name`, `lastname`, `age`, `genre`, `eps`, `tp`, `ptt`, `atiii`, `tt`, `fibrinogeno`) VALUES
-(10, '5', 'Juan', 'Perez', '30', 'Male', '10', '10', '25', '15.7', '8.9', '300');
+(10, '5', 'Juan', 'Perez', '30', 'Male', '10', '10', '25', '15.7', '8.9', '300'),
+(11, '1', 'Jose', 'Antioquio', '30', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
+(12, '2', '555', 'Antioquio', '30', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
+(14, '3', '8888', 'Antioquio', '30', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
+(15, '4', '8888', '34tats4r543', '30', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
+(17, '6', 'fdsgf', '34tatsdgase4r543', '30', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
+(18, '7', '2525454254', '24524554542', '30', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
+(19, '8', '2525454254', '24524554542', '30', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
+(20, '9', '2525454254', '24524554542', '345550', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
+(21, '10', '2525454254', '24524554542', '345550', 'Helicopter', '510', '150', '25', '15.7', '8.9', '300');
 
 --
 -- Índices para tablas volcadas
@@ -68,7 +77,7 @@ ALTER TABLE `patients`
 -- AUTO_INCREMENT de la tabla `patients`
 --
 ALTER TABLE `patients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
