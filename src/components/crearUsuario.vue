@@ -5,10 +5,7 @@
   <div class="container py-4">
     <div class="row g-0 align-items-center">
       <div class="col-lg-6 mb-5 mb-lg-0">
-        <div class="card cascading-right" style="
-            background: hsla(0, 0%, 100%, 0.55);
-            backdrop-filter: blur(30px);
-            ">
+        <div class="card cascading-right">
           <div class="card-body p-5 shadow-5 text-center">
             <h2 class="fw-bold mb-5">Crear usuario</h2>
             <form>
@@ -105,25 +102,33 @@
 </template>
 
 <style scoped>
+.card {
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
 
-  .card {
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-  }
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(75, 75, 75, 0.1);
+}
 
-  .form-control {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(75, 75, 75, 0.1); 
-  }
 
-  @media (min-width: 992px) {
-    .cascading-right {
-      margin-right: 50px;
-    }
+section {
+  background-image: url('../assets/fondo5.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 992px) {
+  .cascading-right {
+    margin-right: 50px;
   }
+}
 </style>
+
 <script>
 export default{
   data(){

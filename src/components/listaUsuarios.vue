@@ -118,3 +118,62 @@ export default {
     }
 }
 </script>
+<style>
+
+    .card {
+        border-radius: 2%;
+    }
+
+    .card-header {
+        background-color: #6abed2;
+        color: rgb(29, 29, 29);
+        font-weight: bold;
+        padding: 1% 1.5px;
+    }
+
+
+    .table th, .table td {
+        border: 1% solid #000000;
+        padding: 1%;
+    }
+
+    .table th {
+        background-color: #babcab;
+    }
+
+    .table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .table tr:hover {
+        background-color: #e9e9e9;
+    }
+
+    .btn {
+        border-radius: 5px;
+        padding: 8px 15px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        color: white;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .card-footer {
+        text-align: center;
+        background-color: #f1f1f1;
+        padding: 10px 0;
+    }
+</style>
