@@ -10,7 +10,7 @@
             backdrop-filter: blur(30px);
             ">
           <div class="card-body p-5 shadow-5 text-center">
-            <h2 class="fw-bold mb-5">Crear usuario</h2>
+            <h2 class="fw-bold mb-5">Editar usuarios</h2>
             <form>
             <div class="row">
                 <div class="col-md-6 mb-4">
@@ -141,18 +141,19 @@ methods:{
        updateUser(){
 
     
-      const name= encodeURIComponent(this.nameUser)
-      const lastname=encodeURIComponent(this.lastnameUser)
-      const document= encodeURIComponent(this.documentUser)
-      const age= encodeURIComponent(this.age)
-      const gender=encodeURIComponent(this.Gender) 
-      const eps=encodeURIComponent(this.epsName)  
-      const tp=encodeURIComponent(this.tp)
-      const ptt=encodeURIComponent(this.ptt)
-      const atii=encodeURIComponent(this.atii)
-      const tt=encodeURIComponent(this.tt)
-      const fibrogeno=encodeURIComponent(this.Fibrogeno) 
+      const name= encodeURIComponent(this.user.name)
+      const lastname=encodeURIComponent(this.user.lastname)
+      const document= encodeURIComponent(this.user.doc)
+      const age= encodeURIComponent(this.user.age)
+      const gender=encodeURIComponent(this.user.genre) 
+      const eps=encodeURIComponent(this.user.eps)  
+      const tp=encodeURIComponent(this.user.tp)
+      const ptt=encodeURIComponent(this.user.ptt)
+      const atii=encodeURIComponent(this.user.atiii)
+      const tt=encodeURIComponent(this.user.tt)
+      const fibrogeno=encodeURIComponent(this.user.fibrinogeno) 
       let enviar={
+        "id":this.$route.params.id,
         "doc":document,
         "name":name,
         "lastname":lastname,
@@ -166,13 +167,14 @@ methods:{
         "fibrinogeno": fibrogeno
     }
     console.log(enviar)
-     fetch('https://localhost/lsi/?insertar=1',{
+     fetch('https://localhost/lis/?actualizar='+this.$route.params.id,{
                 method:"POST",
                 body:JSON.stringify(enviar)
             })
             .then(respuesta=>respuesta.json())
             .then((datosRespuesta=>{
                 console.log(datosRespuesta);
+                window.location="/#/lUser"
             }))
             .catch((error=>{console.error("Error:",error);alert("Paso algo no sé que fue")})) 
     },
@@ -202,12 +204,6 @@ methods:{
 
                   })
                   .catch(console.log)
-
-
-
-
-
-
     }
 
     

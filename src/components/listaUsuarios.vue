@@ -27,11 +27,6 @@
                             <th>Edad</th>
                             <th>Genero</th>
                             <th>EPS</th>
-                            <th>Tp</th>
-                            <th>Ptt</th>
-                            <th>Atiii</th>
-                            <th>Tt</th>
-                            <th>Fibrinogeno</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,14 +39,10 @@
                             <td>{{usuario.age}}</td>
                             <td>{{usuario.genre}}</td>
                             <td>{{EPS[usuario.eps]}}</td>
-                            <td>{{usuario.tp}}</td>
-                            <td>{{usuario.ptt}}</td>
-                            <td>{{usuario.atiii}}</td>
-                            <td>{{usuario.tt}}</td>
-                            <td>{{usuario.fibrinogeno}}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="">
                                      <router-link :to="{name:'editUser', params:{id:usuario.id}}" class="btn btn-info">Editar</router-link> 
+                                     <router-link :to="{name:'resUser', params:{id:usuario.id}}" class="btn btn-success">Resultados</router-link> 
                                     <button type="button" v-on:click="DeleteUser(usuario.id)" class="btn btn-danger">Borrar</button>
                                 </div>
                             </td>
@@ -101,7 +92,7 @@ export default {
             .then((datosRespuesta)=>{
             if (datosRespuesta.success==1){
                 alert("Usuario eliminado exitosamente")
-                window.location.href="/"
+                window.location.href="/lUser"
             }
             else{
                 alert("Hubo un problema")

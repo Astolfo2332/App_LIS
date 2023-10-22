@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import CUser from "../components/crearUsuario.vue"
 import lUser from "../components/listaUsuarios.vue"
 import eUser from "../components/editarUsuarios.vue"
+import rUser from "../components/resultadoUsuario.vue"
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/eUser:id',
     name: 'editUser',
     component: eUser
+  },
+  {
+    path: '/rUser:id',
+    name: 'resUser',
+    component: rUser
   }
 ]
 
