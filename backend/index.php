@@ -32,6 +32,16 @@ if (isset($_GET["consultarEpsid"])){
         } else{  echo json_encode(["success"=>0]); 
         exit();}
 }
+if (isset($_GET["consultaridoc"])){
+        $id = mysqli_query($conexionBD,"SELECT id FROM patients WHERE doc=".$_GET["consultaridoc"]);
+        if(mysqli_num_rows($id) > 0){
+            $id = mysqli_fetch_all($id,MYSQLI_ASSOC);
+            echo json_encode($id); 
+            exit();
+        } else{  echo json_encode(["success"=>0]); 
+        exit();}
+}
+
 
 if (isset($_GET["consultarEps"])){
         $eps = mysqli_query($conexionBD,"SELECT * FROM eps");

@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/CUser">Crear usuario</router-link> |
-    <router-link to="/lUser">Lista usuarios</router-link> 
+    <router-link to="/lUser">Lista usuarios</router-link> |
+    <router-link to="/sUser">Buscar usuario</router-link> 
   </nav>
   <router-view/>
 </template>

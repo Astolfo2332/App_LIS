@@ -13,7 +13,9 @@
         ">
         <div class="card">
             <div class="card-header">
-            Resultados de usuario con id: {{this.$route.params.id}}
+            Resultados de usuario con id: {{this.$route.params.id}} <br>
+            Nombre: {{ this.user.name +" "+ this.user.lastname }}<br>
+            Documento: {{ this.user.doc }}<br>
             </div>
             <div class="card-body">
                 <div class="table-responsive">

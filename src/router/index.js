@@ -4,6 +4,7 @@ import CUser from "../components/crearUsuario.vue"
 import lUser from "../components/listaUsuarios.vue"
 import eUser from "../components/editarUsuarios.vue"
 import rUser from "../components/resultadoUsuario.vue"
+import sUser from "../components/busquedaUsuario.vue"
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/rUser:id',
     name: 'resUser',
     component: rUser
+  },
+  {
+    path: '/sUser',
+    name: 'serUser',
+    component: sUser
   }
 ]
 
