@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2023 a las 20:36:30
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Host: localhost
+-- Generation Time: Oct 22, 2023 at 09:13 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,34 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `maicenascript`
+-- Database: `maicenascript`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `patients`
+-- Table structure for table `eps`
+--
+
+CREATE TABLE `eps` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `eps`
+--
+
+INSERT INTO `eps` (`id`, `name`) VALUES
+(1, 'Sura'),
+(2, 'Cafe salud'),
+(3, 'eps generica'),
+(4, 'Nueva eps');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patients`
 --
 
 CREATE TABLE `patients` (
@@ -43,7 +64,7 @@ CREATE TABLE `patients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `patients`
+-- Dumping data for table `patients`
 --
 
 INSERT INTO `patients` (`id`, `doc`, `name`, `lastname`, `age`, `genre`, `eps`, `tp`, `ptt`, `atiii`, `tt`, `fibrinogeno`) VALUES
@@ -56,28 +77,42 @@ INSERT INTO `patients` (`id`, `doc`, `name`, `lastname`, `age`, `genre`, `eps`, 
 (18, '7', '2525454254', '24524554542', '30', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
 (19, '8', '2525454254', '24524554542', '30', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
 (20, '9', '2525454254', '24524554542', '345550', 'Male', '510', '150', '25', '15.7', '8.9', '300'),
-(21, '10', '2525454254', '24524554542', '345550', 'Helicopter', '510', '150', '25', '15.7', '8.9', '300');
+(21, '10', '2525454254', '24524554542', '345550', 'Helicopter', '510', '150', '25', '15.7', '8.9', '300'),
+(23, '23', 'Juan', 'Perez', '34', 'Helicoptero Apache', '10', '10', '25', '15.7', '8.9', '300'),
+(24, '12345', 'pene', 'pene', '12', 'Femenino', '1', '3523', '123124', '436', '1235', '2135');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `patients`
+-- Indexes for table `eps`
+--
+ALTER TABLE `eps`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `patients`
 --
 ALTER TABLE `patients`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `doc` (`doc`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `patients`
+-- AUTO_INCREMENT for table `eps`
+--
+ALTER TABLE `eps`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `patients`
 --
 ALTER TABLE `patients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

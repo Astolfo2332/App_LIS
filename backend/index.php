@@ -20,6 +20,28 @@ $passwd = "";
 $nombreBaseDatos = "maicenascript";
 $conexionBD = new mysqli($servidor, $usuario, $passwd, $nombreBaseDatos);
 
+/* Consulta UN registro de paciente de la tabla patients teniendo como criterio de búsqueda 
+   la variable 'id' que viene en el $_GET["consultar"] 
+   */
+if (isset($_GET["consultarEpsid"])){
+        $eps = mysqli_query($conexionBD,"SELECT * FROM eps WHERE id=".$_GET["consultarEpsid"]);
+        if(mysqli_num_rows($eps) > 0){
+            $eps = mysqli_fetch_all($eps,MYSQLI_ASSOC);
+            echo json_encode($eps); 
+            exit();
+        } else{  echo json_encode(["success"=>0]); 
+        exit();}
+}
+
+if (isset($_GET["consultarEps"])){
+        $eps = mysqli_query($conexionBD,"SELECT * FROM eps");
+        if(mysqli_num_rows($eps) > 0){
+            $eps = mysqli_fetch_all($eps,MYSQLI_ASSOC);
+            echo json_encode($eps); 
+            exit();
+        } else{  echo json_encode(["success"=>0]); 
+        exit();}
+}
 
 /* Consulta UN registro de paciente de la tabla patients teniendo como criterio de búsqueda 
    la variable 'id' que viene en el $_GET["consultar"] 
