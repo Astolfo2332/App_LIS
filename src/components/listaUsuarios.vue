@@ -26,6 +26,7 @@
                             <th>Documemnto</th>
                             <th>Edad</th>
                             <th>Genero</th>
+                            <th>EPS</th>
                             <th>Tp</th>
                             <th>Ptt</th>
                             <th>Atiii</th>
@@ -35,13 +36,14 @@
                     </thead>
                     <tbody>
                         <tr v-for="usuario in usuarios" :key="usuario.id">
+                            {{getEps(usuario.eps)}}
                             <td scope="row">{{usuario.id}}</td>
                             <td>{{usuario.name}}</td>
                             <td>{{usuario.lastname}}</td>
                             <td>{{usuario.doc}}</td>
                             <td>{{usuario.age}}</td>
                             <td>{{usuario.genre}}</td>
-                            <td>{{getEps(usuario.eps)}}</td>
+                            <td>{{EPS[usuario.eps]}}</td>
                             <td>{{usuario.tp}}</td>
                             <td>{{usuario.ptt}}</td>
                             <td>{{usuario.atiii}}</td>
@@ -71,7 +73,8 @@
 export default {
     data(){
         return {
-            usuarios:[]
+            usuarios:[],
+            EPS:{}
         }
     },
     created:function(){
@@ -83,11 +86,9 @@ export default {
            fetch(url)
             .then(respuesta=>respuesta.json())
             .then((datosRespuesta)=>{
-                console.log(datosRespuesta)
                 this.usuarios=[]
                 if(datosRespuesta){
                     this.usuarios=datosRespuesta
-                    console.log(datosRespuesta)
                 }
 
             })
@@ -109,18 +110,20 @@ export default {
             .catch(console.log)
         },
         getEps(id){
-            const url="https://localhost/lis/?consularEpsid="+id
+            const url="https://localhost/lis/?consultarEpsid="+id
             fetch(url)
             .then(respuesta=>respuesta.json())
             .then((datosRespuesta)=>{
-                console.log(datosRespuesta)
-                return datosRespuesta
+                if (datosRespuesta[0].name){
+                console.log(datosRespuesta[0].name)
+                this.EPS[id]=datosRespuesta[0].name
+                }
+                else {
+                    this.EPS[id]=""
+                }
             })
             .catch(console.log)
-
-
         }
-
     }
 }
 </script>

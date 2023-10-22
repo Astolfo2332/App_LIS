@@ -163,8 +163,8 @@ methods:{
         "tt": tt,
         "fibrinogeno": fibrogeno
     }
-    console.log(enviar)
-     fetch('https://localhost/lsi/?insertar=1',{
+    console.log(JSON.stringify(enviar))
+     fetch('https://localhost/lis/?insertar',{
                 method:"POST",
                 body:JSON.stringify(enviar)
             })
@@ -172,7 +172,8 @@ methods:{
             .then((datosRespuesta=>{
                 console.log(datosRespuesta);
             }))
-            .catch((error=>{console.error("Error:",error);alert("Paso algo no sé que fue")})) 
+            .catch((error=>{console.error("Error:",error);
+            alert("Paso algo no sé que fue")})) 
     },
       getEps(){
         fetch('https://localhost/lis/?consultarEps')
