@@ -39,7 +39,7 @@
                             <td>{{this.user.tt}}</td>
                             <td>{{this.user.fibrinogeno}}</td>
                         </tr>
-                    <router-link :to="{name:'listUsers'}" class="btn btn-info">Regresar</router-link> 
+                   <button @click="goBack" class="btn btn-info">Regresar</button> 
                     </tbody>
                 </table>
             </div>
@@ -76,6 +76,9 @@ export default {
 
                   })
                   .catch(console.log)
+    },
+    goBack(){
+        this.$router.go(-1)
     }
    }
 }
