@@ -45,7 +45,7 @@
 
   .card {
     border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(159, 1, 1, 0.2);
     border-radius: 10px;
   }
 
@@ -54,6 +54,12 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(75, 75, 75, 0.1); 
   }
+  section {
+  background-image: url('../assets/fondo5.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 
   @media (min-width: 992px) {
     .cascading-right {
