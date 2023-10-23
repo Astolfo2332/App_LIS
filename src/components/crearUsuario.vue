@@ -49,34 +49,42 @@
                 <label class="form-label" for="form3Example4"> Eps </label>
               </div>
 
-
+              <div class="row">
+                <div class="col-md-6 mb-4">
               <div class="form-outline mb-4">
                 <input type="tel" id="form3Example4" class="form-control" v-model=" tp " required/>
                 <label class="form-label" for="form3Example4">Tp</label>
               </div>
 
+              </div>
 
+                <div class="col-md-6 mb-4">
               <div class="form-outline mb-4">
                 <input type="tel" id="form3Example4" class="form-control" v-model=" ptt " required/>
                 <label class="form-label" for="form3Example4">Ptt</label>
               </div>
 
+              </div>
+                <div class="col-md-6 mb-4">
               <div class="form-outline mb-4">
                 <input type="tel" id="form3Example4" class="form-control" v-model="atii" required/>
                 <label class="form-label" for="form3Example4">Atii</label>
               </div>
 
+              </div>
 
+                <div class="col-md-6 mb-4">
               <div class="form-outline mb-4">
                 <input type="tel" id="form3Example4" class="form-control" v-model="tt" required/>
                 <label class="form-label" for="form3Example4">Tt</label>
               </div>
+              </div>
 
+              </div>
               <div class="form-outline mb-4">
                 <input type="tel" id="form3Example4" class="form-control" v-model="Fibrogeno" required/>
                 <label class="form-label" for="form3Example4">Fibrogeno</label>
               </div>
-
               <button type="submit" class="btn btn-primary btn-block mb-4" @click="SaveUser">
                 Crear
               </button>
