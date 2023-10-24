@@ -19,7 +19,7 @@
       </a>
     <div class="copyright-container">
       <div class="copyright">
-        &copy; 2023 MaizenaScript. Todos los derechos reservados.
+        &copy; 2023 maicenaScript. Todos los derechos reservados.
       </div>
     </div>
     </div>
