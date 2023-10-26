@@ -31,7 +31,7 @@
       </div>
 
       <div class="col-lg-6 mb-5 mb-lg-0">
-        <img src="../assets/coco.png" class="w-100 rounded-4 shadow-4"
+        <img src="../assets/dibujo2.png" class="w-100 rounded-4 shadow-4"
           alt="" />
       </div>
     </div>
@@ -55,7 +55,7 @@
     box-shadow: 0 0 10px rgba(75, 75, 75, 0.1); 
   }
   section {
-  background-image: url('../assets/fondo5.jpg');
+  background-image: url('../assets/consultar.png');
   background-size: cover;
   background-position: center;
 }

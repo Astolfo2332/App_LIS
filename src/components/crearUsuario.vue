@@ -97,11 +97,6 @@
           </div>
         </div>
       </div>
-
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <img src="../assets/coco.png" class="w-100 rounded-4 shadow-4"
-          alt="" />
-      </div>
     </div>
   </div>
   <!-- Jumbotron -->
@@ -123,11 +118,12 @@
   box-shadow: 0 0 10px rgba(75, 75, 75, 0.1);
 }
 
-
 section {
-  background-image: url('../assets/fondo5.jpg');
+  padding-top: 5%; 
+  background-image: url('../assets/detalle21.png');
   background-size: cover;
   background-position: center;
+  padding-bottom: 5%;
 }
 
 @media (min-width: 992px) {
