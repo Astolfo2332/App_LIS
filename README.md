@@ -15,7 +15,7 @@ npm install
 ```
 npm run serve
 ```
-### If you want a more light deploy ypu can follow:
+### If you want a more light deploy you can follow:
 - unzip the newest release
 - check if you have de serve package install, if not you can follow:
 ```
