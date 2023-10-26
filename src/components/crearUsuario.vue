@@ -137,7 +137,7 @@ section {
 export default{
   data(){
         return {
-            genders:["Masculino","Femenino","Helicoptero"]
+            genders:["Masculino","Femenino"]
             ,epss:[]
         }
     },
