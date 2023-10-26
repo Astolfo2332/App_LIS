@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="p-5 bg-image" style="
-        background-image: url('https://tinyurl.com/5du55a95');
+        background-image: url('https://raw.githubusercontent.com/Astolfo2332/App_LIS/main/src/assets/consultar.png');
         height: 300px;
         "></div>
   <!-- Background image -->
